@@ -1,9 +1,11 @@
 import numpy as np
 
 def bezier(control_points):
+
     """Returns list of points on cubic Bezier curve of given by control_points,
        for later use in cv2.polylines().
        control_points is an np.array."""
+
     t=np.linspace(0,1,101,endpoint=True,dtype=np.float64)
     points=np.zeros((len(t),2),dtype=np.float64)
     for idx, ti in enumerate(t):
